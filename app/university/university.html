@@ -1,8 +1,17 @@
-<p>University Partial</p> 
+<div ng-controller="UniversityCtrl">
+<h1>Universities</h1> 
 
-<label>Date: <input kendo-date-picker /></label>
+<!-- <label>Date: <input kendo-date-picker /></label> -->
 
-<button ng-controller="UniversityCtrl" ng-click="showAlert()">Show</button>
+<!-- <button  ng-click="showAlert()">Show</button> -->
 
 
-<kendogrid source="people" groupable="true" sortable="true" columns="columns" pageable="true"></kendogrid>
+<!-- <kendogrid kendo-grid="grid" k-data-source="universities" groupable="true" sortable="true" columns="columns" pageable="true" ></kendogrid> -->
+<kendogrid kendo-grid="grid" k-data-source="universities" columns="columns"></kendogrid> 
+<!-- <div kendo-grid k-data-source="universities" k-columns="[{ title: 'Name', field: 'name' }, { title: 'Country', field: 'country' }, { title: 'Lenguaje', field: 'language' }]"></div> -->
+
+<!-- <ul>
+    <li ng-repeat="univesity in universities">{{ univesity.name }} - {{ univesity.country }}</li>
+  </ul> -- >
+
+</div>
